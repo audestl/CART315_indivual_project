@@ -4,29 +4,27 @@ using UnityEngine;
 
 public class gameover : MonoBehaviour
 {
-    private Vector3 initialPosition;
+    private Vector3 initialposition;
     public GameObject theball;
 
     // Start is called before the first frame update
     void Start()
     {
-        initialPosition = theball.transform.position;
+        initialposition = theball.transform.position;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+
     }
 
-    void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("game over");
-        if(collider.gameObject ==theball)
+        if (collider.gameObject == theball)
         {
-            theball.transform.position = initialPosition;
+            Debug.Log("game over");
+            theball.transform.position = initialposition;
         }
-
     }
 }
-
