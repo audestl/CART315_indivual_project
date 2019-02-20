@@ -10,7 +10,6 @@ GENERAL IMPRESSIONS
 
 WHAT TO IMPROVE
 
-- 
 - There should be a maximum size for the ball to grow and a minimum size for the ball to shrink.
 - The ball should retrieve it's initial size when the player lose and the game is restarted.
 - The mechanic with the barrier in the corner should be fix so that it's functionnal
@@ -18,7 +17,8 @@ WHAT TO IMPROVE
 SUGGESTIONS/IDEAS
 
 - The game could have a sens of puzzle with the bumpers. If the ball hit the bumpers in a certain order, it would be the solution to open
-the "barrier" and access the final bumper which makes you win the game.
+  the "barrier" and access the final bumper which makes you win the game.
 - Sound could be played when the ball gets bigger or when it gets smaller.
 - Particles could appear when the ball gets smaller/bigger
+- More than one barrier that protect a bumper
 
