@@ -12,7 +12,7 @@ public class Bumper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        theDoor.GetComponent<DoorOpening>().enabled = false;
+
     }
 
     // Update is called once per frame
@@ -31,14 +31,17 @@ public class Bumper : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("enter");
         if (timer == 0)
         {
             thescore.AddScore(5);
             thescore.Addmultiplier(1);
         }
         // if bumper is red when enter a collision, 
-        if (GameObject.Find("Bumper").GetComponent<Renderer>().material.color == Color.red)
-        { theDoor.GetComponent<DoorOpening>().enabled=true; 
+        if (this.GetComponent<Renderer>().material.color == Color.red)
+        {
+            theDoor.GetComponent<DoorOpening>().enabled=true;
+
         }
 
         this.GetComponent<AudioSource>().Play();

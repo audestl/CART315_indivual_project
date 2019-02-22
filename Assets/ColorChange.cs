@@ -23,7 +23,7 @@ public class ColorChange : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > 2)
         {
-            if (index < color.Length-1)
+            if (index < 1)
                 index++;
             else
                 index = 0; 
