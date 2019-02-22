@@ -1,0 +1,25 @@
+Playtest 1- February 20th 2019
+
+GENERAL IMPRESSIONS
+
+- Overall, people liked the blocks that made the ball big or small (working well)
+- They were curious and intrigued by the bumper that was changing colors, they were trying to hit it.
+- They were surprised when the ball hit too hard and went out of the game (not suppose to happen).
+
+
+WHAT TO IMPROVE
+
+- There could be a maximum size for the ball to grow and a minimum size for the ball to shrink so that it doesn't get stuck or gets out
+  of the game.
+- The ball should retrieve it's initial size when the player lose and the game is restarted.
+- The mechanic with the barrier in the corner should be fix so that it's functionnal
+- The game could be more dynamic. More stuff moving around, more sound, more movements.
+
+SUGGESTIONS/IDEAS
+
+- The game could have a sens of puzzle with the bumpers. If the ball hit the bumpers in a certain color order, it would be the solution
+  to open the "barrier" and access the ultimate bumper which makes you win the game.
+- Sound could be played when the ball gets bigger or when it gets smaller.
+- Particles could appear when the ball gets smaller/bigger
+- The game could have more than one barrier that protects a bumper.
+
