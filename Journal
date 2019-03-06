@@ -1,14 +1,14 @@
+________________________________________________________________________________________________________________________
 Playtest 1- February 20th 2019
+________________________________________________________________________________________________________________________
 
 GENERAL IMPRESSIONS
-
 - Overall, people liked the blocks that made the ball big or small (working well)
 - They were curious and intrigued by the bumper that was changing colors, they were trying to hit it.
 - They were surprised when the ball hit too hard and went out of the game (not suppose to happen).
 
 
 WHAT TO IMPROVE
-
 - There could be a maximum size for the ball to grow and a minimum size for the ball to shrink so that it doesn't get stuck or gets out
   of the game.
 - The ball should retrieve it's initial size when the player lose and the game is restarted.
@@ -16,10 +16,37 @@ WHAT TO IMPROVE
 - The game could be more dynamic. More stuff moving around, more sound, more movements.
 
 SUGGESTIONS/IDEAS
-
 - The game could have a sens of puzzle with the bumpers. If the ball hit the bumpers in a certain color order, it would be the solution
   to open the "barrier" and access the ultimate bumper which makes you win the game.
 - Sound could be played when the ball gets bigger or when it gets smaller.
 - Particles could appear when the ball gets smaller/bigger
 - The game could have more than one barrier that protects a bumper.
+
+________________________________________________________________________________________________________________________
+PLAYTEST 2- MARCH 6TH 2019
+________________________________________________________________________________________________________________________
+WHAT'S NEW
+- The bumpers are changing colors from red to green and from green to red when there's a collision. The color of the bumpers are not
+depending on time anymore.
+- To open the door, all the bumpers need to be green.
+- I removed the "getBigger" and "getSmaller" objects.
+- I added a YOU WON statement when the ball collides with the bumper that was hidden.
+
+GENERAL IMPORESSION
+- The user understood quickly how the game worked.
+- The user was curious by the fact that the bumpers were changing colors due to collision.
+- The player wanted to reach the bumper that was blocked by the door.
+- Lots of people said it was fun and that they didn't want to leave until "Winning the game
+
+
+WHAT TO IMPROVE
+- It needs a collision plane to prevent the ball from getting out of the plane
+- It needs a timer for the OnCollisionEnter so that the bumper don't change colors too quickly.
+- The ball speed should increase when it collide to bumpers and door.
+- When the door is open, the color of the bumpers shouldn't change since the user gets confuse.
+
+SUGGESTIONS/IDEAS
+-More components, more doors to make it more challenging
+- To win, the ball could need to fall into a hole. Therefore, the "getBigger" and "getSmaller" functions would be usefull since the ball won't be able to get into
+the hole if it's too big
 
