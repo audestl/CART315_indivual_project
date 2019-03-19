@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 11908721}
   - component: {fileID: 11908719}
   - component: {fileID: 11908718}
+  - component: {fileID: 11908720}
   m_Layer: 9
   m_Name: Door
   m_TagString: Untagged
@@ -177,6 +178,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &11908720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11908716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85631fa2517e2433f8e78cda892a3bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!136 &11908721
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -267,7 +281,7 @@ Transform:
   m_LocalScale: {x: 3.5076, y: 3.5076, z: 9.8486395}
   m_Children: []
   m_Father: {fileID: 831362091}
-  m_RootOrder: 9
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &80960828
 MonoBehaviour:
@@ -314,6 +328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bumper
+      objectReference: {fileID: 0}
+    - target: {fileID: 904357904443146714, guid: f15e24134e0043a459da871096c72e7c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 904357904443146715, guid: f15e24134e0043a459da871096c72e7c,
         type: 3}
@@ -1200,7 +1219,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575300313}
   m_LocalRotation: {x: 0.43187517, y: 0.5532726, z: -0.42485416, w: 0.5717275}
-  m_LocalPosition: {x: 0, y: 0, z: 0.02}
+  m_LocalPosition: {x: 0, y: 0, z: 0.12}
   m_LocalScale: {x: 0.39474005, y: 0.39474005, z: -0.12280363}
   m_Children: []
   m_Father: {fileID: 831362091}
@@ -1208,7 +1227,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 58.12, y: 88.4, z: -0.000015258789}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.90962654, y: 0.29235664}
+  m_AnchoredPosition: {x: -2.59, y: 2.71}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575300315
@@ -1569,7 +1588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786683653}
   m_LocalRotation: {x: -0.0000000037252907, y: 0.06771247, z: 0.000000014901163, w: 0.9977049}
-  m_LocalPosition: {x: -3.997, y: 0.19, z: 1.016}
+  m_LocalPosition: {x: -4.01, y: 0.19, z: 0.92}
   m_LocalScale: {x: 0.38535792, y: 0.38535792, z: 1.2517195}
   m_Children: []
   m_Father: {fileID: 831362091}
@@ -1660,7 +1679,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999976, z: 0.37}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -3.7910948, y: -0.73602283, z: 1.4748893}
+  m_ConnectedAnchor: {x: -3.8035622, y: -0.73970664, z: 1.3788893}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -1792,11 +1811,11 @@ Transform:
   - {fileID: 786683654}
   - {fileID: 983288546}
   - {fileID: 345748642}
+  - {fileID: 80960827}
   - {fileID: 1293732621}
   - {fileID: 299667864}
   - {fileID: 231081803}
   - {fileID: 1986529738}
-  - {fileID: 80960827}
   - {fileID: 949918268}
   - {fileID: 929080366}
   - {fileID: 575300314}
@@ -2281,8 +2300,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983288545}
   m_LocalRotation: {x: -0.005168674, y: -0.12367375, z: -0.032981727, w: 0.9917612}
-  m_LocalPosition: {x: -4.174, y: 0.132, z: -1.03}
-  m_LocalScale: {x: 0.38535997, y: 0.38536, z: 1.2517202}
+  m_LocalPosition: {x: -4.18, y: 0.13, z: -0.99}
+  m_LocalScale: {x: 0.38535997, y: 0.38536, z: 1.6019516}
   m_Children: []
   m_Father: {fileID: 831362091}
   m_RootOrder: 3
@@ -2298,7 +2317,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999976, z: -0.28}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -3.907803, y: -0.8381614, z: -1.3701451}
+  m_ConnectedAnchor: {x: -3.889441, y: -0.83670396, z: -1.4252048}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -3011,6 +3030,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bumper
+      objectReference: {fileID: 0}
+    - target: {fileID: 904357904443146714, guid: f15e24134e0043a459da871096c72e7c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 904357904443146715, guid: f15e24134e0043a459da871096c72e7c,
         type: 3}
@@ -4117,6 +4141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bumper
+      objectReference: {fileID: 0}
+    - target: {fileID: 904357904443146714, guid: f15e24134e0043a459da871096c72e7c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 904357904443146715, guid: f15e24134e0043a459da871096c72e7c,
         type: 3}

@@ -14,7 +14,7 @@ public class Bumper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Value of the variable num at the start=" + num + " ");
+        //Debug.Log("Value of the variable num at the start=" + num + " ");
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class Bumper : MonoBehaviour
             timer--;
         }
 
-        Debug.Log("Value of the variable during game=" + num + " ");
+        //Debug.Log("Value of the variable during game=" + num + " ");
 
         //if (this.GetComponent<Renderer>().material.color == Color.red)
         if (num == 3)
@@ -62,11 +62,11 @@ public class Bumper : MonoBehaviour
     public static void increaseNum()
     { 
         num++;
-        Debug.Log("VALUE OF NUM WHEN INCREASE NUM IS CALLED = "+ num);
+        //Debug.Log("VALUE OF NUM WHEN INCREASE NUM IS CALLED = "+ num);
     }
     public static void decreaseNum()
     {   
          num--;
-        Debug.Log("VALUE OF NUM WHEN DECREASE NUM IS CALLED = " + num);
+        //Debug.Log("VALUE OF NUM WHEN DECREASE NUM IS CALLED = " + num);
     }
 }

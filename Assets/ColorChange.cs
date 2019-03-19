@@ -6,10 +6,11 @@ using UnityEngine;
 public class ColorChange : MonoBehaviour
 {
 
-    float timer;
+
   //  public GameObject rb;
     Color[] color = new Color[2];
     int index = 0;
+    private int timer = 0;
 
 
     void Start()
@@ -20,7 +21,7 @@ public class ColorChange : MonoBehaviour
         this.GetComponent<Renderer>().material.color = color[index];
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //timer += Time.deltaTime;
         //if (timer > 2)
@@ -32,19 +33,35 @@ public class ColorChange : MonoBehaviour
         //    this.GetComponent<Renderer>().material.color = color[index];
         //    timer = 0;
         //}
+        if (timer == 0)
+        {
+            this.GetComponent<ConstantForce>().enabled = false;
+        }
+        else
+        {
+            //Debug.Log(timer);
+            timer--;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (index < 1)
-            index++;
-        else
-            index = 0;
-        this.GetComponent<Renderer>().material.color = color[index];
+        if (timer == 0) {
+            if (index < 1)
+                index++;
+            else
+                index = 0;
+            this.GetComponent<Renderer>().material.color = color[index];
 
-          if(index==1)              //if(this.GetComponent<Renderer>().material.color == color[1])
-            Bumper.increaseNum();
-        else
-            Bumper.decreaseNum();
+            if (index == 1)              //if(this.GetComponent<Renderer>().material.color == color[1])
+                Bumper.increaseNum();
+            else
+                Bumper.decreaseNum();
+        }
+        this.GetComponent<ConstantForce>().enabled = true;
+        timer = 3;
 
     }
+
+
+     
 }
