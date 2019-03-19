@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Bumper : MonoBehaviour
 {
     public Score thescore;
     public DoorOpening theDoor;
+    private ColorChange cc;
    
     public static int num = 0;
-
     private int timer = 0;
+    private bool activeColorChange = true;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        //Debug.Log("Value of the variable num at the start=" + num + " ");
+       
     }
 
     // Update is called once per frame
@@ -32,11 +34,15 @@ public class Bumper : MonoBehaviour
 
         //Debug.Log("Value of the variable during game=" + num + " ");
 
-        //if (this.GetComponent<Renderer>().material.color == Color.red)
         if (num == 3)
         {
-            theDoor.GetComponent<DoorOpening>().enabled = true;
+            theDoor.GetComponent<DoorOpening>().enabled = true; // To open the door
+            activeColorChange = false;
            
+        }
+        if(activeColorChange==false)
+        {
+            cc.GetComponent<ColorChange>().enabled = false;
         }
 
     }
@@ -69,4 +75,6 @@ public class Bumper : MonoBehaviour
          num--;
         //Debug.Log("VALUE OF NUM WHEN DECREASE NUM IS CALLED = " + num);
     }
+
+  
 }

@@ -190,7 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85631fa2517e2433f8e78cda892a3bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!136 &11908721
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -332,7 +331,7 @@ PrefabInstance:
     - target: {fileID: 904357904443146714, guid: f15e24134e0043a459da871096c72e7c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 904357904443146715, guid: f15e24134e0043a459da871096c72e7c,
         type: 3}
@@ -3034,7 +3033,7 @@ PrefabInstance:
     - target: {fileID: 904357904443146714, guid: f15e24134e0043a459da871096c72e7c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 904357904443146715, guid: f15e24134e0043a459da871096c72e7c,
         type: 3}
@@ -4145,7 +4144,7 @@ PrefabInstance:
     - target: {fileID: 904357904443146714, guid: f15e24134e0043a459da871096c72e7c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 904357904443146715, guid: f15e24134e0043a459da871096c72e7c,
         type: 3}
@@ -4240,7 +4239,7 @@ PrefabInstance:
     - target: {fileID: 904357904443146692, guid: f15e24134e0043a459da871096c72e7c,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 1.78
+      value: 1.32
       objectReference: {fileID: 0}
     - target: {fileID: 904357904443146691, guid: f15e24134e0043a459da871096c72e7c,
         type: 3}

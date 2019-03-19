@@ -14,25 +14,18 @@ public class ColorChange : MonoBehaviour
 
 
     void Start()
-    {   
+    {
+        this.GetComponent<ColorChange>().enabled = true;
         color[0] = Color.red;
         color[1] = Color.green;
 
         this.GetComponent<Renderer>().material.color = color[index];
+    
     }
 
     void FixedUpdate()
     {
-        //timer += Time.deltaTime;
-        //if (timer > 2)
-        //{
-        //    if (index < 1)
-        //        index++;
-        //    else
-        //        index = 0;
-        //    this.GetComponent<Renderer>().material.color = color[index];
-        //    timer = 0;
-        //}
+
         if (timer == 0)
         {
             this.GetComponent<ConstantForce>().enabled = false;
@@ -52,16 +45,19 @@ public class ColorChange : MonoBehaviour
                 index = 0;
             this.GetComponent<Renderer>().material.color = color[index];
 
-            if (index == 1)              //if(this.GetComponent<Renderer>().material.color == color[1])
+            if (index == 1)             
                 Bumper.increaseNum();
             else
                 Bumper.decreaseNum();
-        }
+                        }
         this.GetComponent<ConstantForce>().enabled = true;
         timer = 3;
 
     }
 
+  
 
-     
+
+
+
 }
