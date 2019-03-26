@@ -36,7 +36,7 @@ public class ColorChange : MonoBehaviour
             timer--;
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (timer == 0) {
             if (index < 1)
@@ -45,11 +45,11 @@ public class ColorChange : MonoBehaviour
                 index = 0;
             this.GetComponent<Renderer>().material.color = color[index];
 
-            if (index == 1)             
-                Bumper.increaseNum();
-            else
-                Bumper.decreaseNum();
-                        }
+            //if (index == 1)             
+            //   // Bumper.increaseNum();
+            //else
+               //// Bumper.decreaseNum();
+        }
         this.GetComponent<ConstantForce>().enabled = true;
         timer = 3;
 

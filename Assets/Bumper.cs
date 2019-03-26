@@ -7,16 +7,23 @@ public class Bumper : MonoBehaviour
 {
     public Score thescore;
     public DoorOpening theDoor;
-    private ColorChange cc;
-   
-    public static int num = 0;
+    public ColorChange cc;
+
+    private static int num;
     private int timer = 0;
     private bool activeColorChange = true;
+    Color[] color = new Color[2];
+    int index = 0;
+
 
 
     void Start()
     {
-       
+
+        color[0] = Color.red;
+        color[1] = Color.green;
+
+        this.GetComponent<Renderer>().material.color = color[index];
     }
 
     // Update is called once per frame
@@ -25,39 +32,54 @@ public class Bumper : MonoBehaviour
         if (timer == 0)
         {
             this.GetComponent<ConstantForce>().enabled = false;
+
+            if (num == 3)
+            {
+
+                Debug.Log("IN ");
+                theDoor.GetComponent<DoorOpening>().enabled = true; // To open the door
+                activeColorChange = false;
+
+            }
+ 
         }
         else
         {
-            Debug.Log(timer);
+            //            Debug.Log(timer);
+       
+            if (num == 3)
+            {
+                Debug.Log("IN THE BEAST BELLY");
+                theDoor.GetComponent<DoorOpening>().enabled = true; // To open the door
+                activeColorChange = false;
+
+
+
+            }
+           
             timer--;
         }
 
-        //Debug.Log("Value of the variable during game=" + num + " ");
 
-        if (num == 3)
-        {
-            theDoor.GetComponent<DoorOpening>().enabled = true; // To open the door
-            activeColorChange = false;
-           
-        }
-        if(activeColorChange==false)
-        {
-            cc.GetComponent<ColorChange>().enabled = false;
-        }
-
-    }
+    } 
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("enter");
+    
         if (timer == 0)
         {
+
+            colorChange();
             thescore.AddScore(5);
             thescore.Addmultiplier(1);
+            //if (activeColorChange == false)
+            //{
+            //    cc.GetComponent<ColorChange>().enabled = false;
+            //}
         }
-        // if bumper is red when enter a collision,
-       
+    
 
+       
         this.GetComponent<AudioSource>().Play();
         this.GetComponent<ConstantForce>().enabled = true;
         timer = 3;
@@ -68,13 +90,30 @@ public class Bumper : MonoBehaviour
     public static void increaseNum()
     { 
         num++;
-        //Debug.Log("VALUE OF NUM WHEN INCREASE NUM IS CALLED = "+ num);
+        Debug.Log("VALUE OF NUM WHEN INCREASE NUM IS CALLED = "+ num);
     }
     public static void decreaseNum()
     {   
          num--;
-        //Debug.Log("VALUE OF NUM WHEN DECREASE NUM IS CALLED = " + num);
+        Debug.Log("VALUE OF NUM WHEN DECREASE NUM IS CALLED = " + num);
     }
 
-  
+    public void colorChange()
+    {
+        if (activeColorChange != false)
+        {
+            if (index < 1)
+                index++;
+            else
+                index = 0;
+            this.GetComponent<Renderer>().material.color = color[index];
+
+            if (index == 1)
+                increaseNum();
+            else
+                decreaseNum();
+        }
+    }
+
+
 }
