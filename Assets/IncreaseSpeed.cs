@@ -21,6 +21,7 @@ public class IncreaseSpeed : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
+        this.GetComponent<AudioSource>().Play();
         velo = collision.rigidbody.velocity.magnitude;
         Debug.Log(velo);
         Vector3 V3 = collision.rigidbody.velocity;

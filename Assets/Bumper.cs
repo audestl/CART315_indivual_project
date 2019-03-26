@@ -7,7 +7,6 @@ public class Bumper : MonoBehaviour
 {
     public Score thescore;
     public DoorOpening theDoor;
-    public ColorChange cc;
 
     private static int num;
     private int timer = 0;
@@ -45,7 +44,7 @@ public class Bumper : MonoBehaviour
         }
         else
         {
-            //            Debug.Log(timer);
+           
        
             if (num == 3)
             {
@@ -71,11 +70,8 @@ public class Bumper : MonoBehaviour
 
             colorChange();
             thescore.AddScore(5);
-            thescore.Addmultiplier(1);
-            //if (activeColorChange == false)
-            //{
-            //    cc.GetComponent<ColorChange>().enabled = false;
-            //}
+
+         
         }
     
 
@@ -114,6 +110,8 @@ public class Bumper : MonoBehaviour
                 decreaseNum();
         }
     }
+
+  
 
 
 }

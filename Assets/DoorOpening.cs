@@ -23,13 +23,9 @@ public class DoorOpening : MonoBehaviour
             myDoor.y -= Time.deltaTime;
             // position.y -= myDoor.y * Time.deltaTime;
             transform.localScale = myDoor;
-            transform.Translate(new Vector3(0, myDoor.y * Time.deltaTime*0.66f, 0), this.transform);
+            transform.Translate(new Vector3(0, myDoor.y * Time.deltaTime*0.70f, 0), this.transform);
         }
     }
-
-
-
-
 
 
 
