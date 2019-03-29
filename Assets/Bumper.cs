@@ -18,7 +18,7 @@ public class Bumper : MonoBehaviour
 
     void Start()
     {
-
+        num = 0;
         color[0] = Color.red;
         color[1] = Color.green;
 
@@ -32,7 +32,7 @@ public class Bumper : MonoBehaviour
         {
             this.GetComponent<ConstantForce>().enabled = false;
 
-            if (num == 3)
+            if (num == 4)
             {
 
                 Debug.Log("IN ");
@@ -46,7 +46,7 @@ public class Bumper : MonoBehaviour
         {
            
        
-            if (num == 3)
+            if (num == 4)
             {
                 Debug.Log("IN THE BEAST BELLY");
                 theDoor.GetComponent<DoorOpening>().enabled = true; // To open the door

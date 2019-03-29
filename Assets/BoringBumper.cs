@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public DoorOpening theDoor;
+
+public class BoringBumper : MonoBehaviour
+{
+    public Score thescore;
+ 
 
 
 private int timer = 0;

@@ -16,23 +16,13 @@ public class IncreaseSpeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnCollisionEnter(Collision collision)
     {
         this.GetComponent<AudioSource>().Play();
-        velo = collision.rigidbody.velocity.magnitude;
-        Debug.Log(velo);
-        Vector3 V3 = collision.rigidbody.velocity;
-        V3 = (collision.transform.position - transform.position) *8;
-        collision.rigidbody.velocity = V3;
-
-        if (collision.rigidbody.velocity.magnitude < velo)
-        {
-            collision.rigidbody.velocity *= velo / collision.rigidbody.velocity.magnitude;
-            Debug.Log("****");
-        }
+        collision.collider.attachedRigidbody.velocity += new Vector3(-50, 0, -50);
    
     }
 

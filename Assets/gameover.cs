@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gameover : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class gameover : MonoBehaviour
         if (collider.gameObject == theball)
         {
             Debug.Log("game over");
+            SceneManager.LoadScene("pinball");
             theball.transform.position = initialposition;
         }
     }
