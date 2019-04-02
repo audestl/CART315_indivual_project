@@ -50,3 +50,31 @@ SUGGESTIONS/IDEAS
 - To win, the ball could need to fall into a hole. Therefore, the "getBigger" and "getSmaller" functions would be usefull since the ball won't be able to get into
 the hole if it's too big
 
+
+________________________________________________________________________________________________________________________
+PLAYTEST 3- MARCH 27TH 2019
+________________________________________________________________________________________________________________________
+WHAT'S NEW
+FIXED ISSUES FROM LAST PLAYTEST:
+- The changing-color bumpers keep the same color once the door is open.
+
+NEW STUFF
+- Added more bumpers so it is more challenging for the user to win the game.
+- Little animation of fireworks when the user win the game.
+- Added a collision plane but still having issues with it.
+
+GENERAL IMPRESSION
+- Some users were frustrated on the placement of the bumpers and on the speed of the ball. It was difficult to give it enough force to reach the
+final bumper hidden by the door.
+- 
+STUFF NEEDED FOR THE FINAL VERSION
+- A menu for the user
+- More polishing on the visual of the game. Maybe give it a theme.
+- Maybe implement a table that will keep track of the player's score.
+
+________________________________________________________________________________________________________________________
+PLAYTEST 4- MARCH 27TH 2019
+________________________________________________________________________________________________________________________
+-I added a menu for the user.
+- The changing-color bumpers are now rotating to make it more challenging and more interactive for the user.
+- I fixed the issue with the door, when opened, was still give it the ball some force. Little bug fixed there.
