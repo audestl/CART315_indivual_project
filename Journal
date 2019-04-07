@@ -67,14 +67,19 @@ GENERAL IMPRESSION
 - Some users were frustrated on the placement of the bumpers and on the speed of the ball. It was difficult to give it enough force to reach the
 final bumper hidden by the door.
 - 
-STUFF NEEDED FOR THE FINAL VERSION
+STUFF NEEDED FOR THE FINAL VERSION & IDEAS
 - A menu for the user
 - More polishing on the visual of the game. Maybe give it a theme.
 - Maybe implement a table that will keep track of the player's score.
+- Maybe rotate the bumpers so it gives temporarly more space to reach the final bumper.
 
 ________________________________________________________________________________________________________________________
 PLAYTEST 4- MARCH 27TH 2019
 ________________________________________________________________________________________________________________________
--I added a menu for the user.
+GENERAL IMPRESSION
+ The users liked the visual of the game with all the flowers. They also enjoyed the transition between the menu and the actual pinball game. 
+ However, they found there was a problem with having four bumpers rotating at the center since it blocks the user from being able to reach
+ the final bumper (the cactus).
+- I added a menu for the user.
 - The changing-color bumpers are now rotating to make it more challenging and more interactive for the user.
 - I fixed the issue with the door, when opened, was still give it the ball some force. Little bug fixed there.
