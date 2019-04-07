@@ -24,5 +24,6 @@ public class Winning : MonoBehaviour
     {
         won.SetActive(true);
         fire.SetActive(true);
+        Debug.Log(collision.collider);
     }
 }
