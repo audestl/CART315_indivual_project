@@ -28,7 +28,7 @@ public class Bumper : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (timer == 0)
         {
@@ -46,18 +46,6 @@ public class Bumper : MonoBehaviour
         }
         else
         {
-           
-       
-            if (num == 4)
-            {
-                Debug.Log("IN THE BEAST BELLY");
-                theDoor.GetComponent<DoorOpening>().enabled = true; // To open the door
-                activeColorChange = false;
-
-
-
-            }
-           
             timer--;
         }
 
@@ -85,35 +73,43 @@ public class Bumper : MonoBehaviour
     
     }
 
-    public static void increaseNum()
-    { 
-        num++;
-        Debug.Log("VALUE OF NUM WHEN INCREASE NUM IS CALLED = "+ num);
-    }
-    public static void decreaseNum()
-    {   
-         num--;
-        Debug.Log("VALUE OF NUM WHEN DECREASE NUM IS CALLED = " + num);
-    }
+
 
     public void colorChange()
     {
         if (activeColorChange != false)
         {
-            if (index < 1)
+            if (index < 1 && index>=0)
+            {
                 index++;
+                updateNum();
+                this.GetComponent<Renderer>().material = color[index];
+            }
             else
+            {
                 index = 0;
-            this.GetComponent<Renderer>().material = color[index];
+                updateNum();
+                this.GetComponent<Renderer>().material = color[index];
+            }
 
-            if (index == 1)
-                increaseNum();
-            else
-                decreaseNum();
         }
     }
 
-  
+    public void updateNum()
+    {
+        if (index == 1) // which means the bumper is green.
+        {
+            num++;
+            Debug.Log("VALUE OF NUM WHEN INCREASE NUM IS CALLED = " + num);
+        }
+        else
+        {
+            num--;
+            Debug.Log("VALUE OF NUM WHEN DECREASE NUM IS CALLED = " + num);
+        }
+    }
+
+
 
 
 }
