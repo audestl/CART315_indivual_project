@@ -22,7 +22,7 @@ public class IncreaseSpeed : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         this.GetComponent<AudioSource>().Play();
-        collision.collider.attachedRigidbody.velocity += new Vector3(-50, 0, -50);
+        collision.collider.attachedRigidbody.velocity += new Vector3(-10, 0, -10);
    
     }
 

@@ -19,7 +19,7 @@ public class Flipper : MonoBehaviour
         if (Input.GetButton(button))
         {
             this.GetComponent<HingeJoint>().useMotor = true;
-            thescore.ResetMultiplier();
+            //thescore.ResetMultiplier();
         }
         else
         {

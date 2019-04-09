@@ -47,7 +47,7 @@ private void OnCollisionEnter(Collision collision)
     {
 
      
-        thescore.AddScore(5);
+        thescore.AddScore(1);
 
 
     }

@@ -11,7 +11,9 @@ public class Bumper : MonoBehaviour
     private static int num;
     private int timer = 0;
     private bool activeColorChange = true;
-    Color[] color = new Color[2];
+    Material[] color = new Material[2];
+    public Material rouge;
+    public Material vert;
     int index = 0;
 
 
@@ -19,10 +21,10 @@ public class Bumper : MonoBehaviour
     void Start()
     {
         num = 0;
-        color[0] = Color.red;
-        color[1] = Color.green;
+        color[0] = rouge;
+        color[1] = vert;
 
-        this.GetComponent<Renderer>().material.color = color[index];
+        this.GetComponent<Renderer>().material = color[index];
     }
 
     // Update is called once per frame
@@ -102,7 +104,7 @@ public class Bumper : MonoBehaviour
                 index++;
             else
                 index = 0;
-            this.GetComponent<Renderer>().material.color = color[index];
+            this.GetComponent<Renderer>().material = color[index];
 
             if (index == 1)
                 increaseNum();

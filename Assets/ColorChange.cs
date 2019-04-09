@@ -8,18 +8,22 @@ public class ColorChange : MonoBehaviour
 
 
   //  public GameObject rb;
-    Color[] color = new Color[2];
+    Material[] color = new Material[2];
     int index = 0;
     private int timer = 0;
 
+   // private Color rouge = new Color(0.94F,0.70F,1F);
+    public Material rouge;
+    public Material vert;
+
 
     void Start()
-    {
+    {   
         this.GetComponent<ColorChange>().enabled = true;
-        color[0] = Color.red;
-        color[1] = Color.green;
+        color[0] = rouge;
+        color[1] = vert;
 
-        this.GetComponent<Renderer>().material.color = color[index];
+       // this.GetComponent<Renderer>().material.color = color[index];
     
     }
 
@@ -43,7 +47,7 @@ public class ColorChange : MonoBehaviour
                 index++;
             else
                 index = 0;
-            this.GetComponent<Renderer>().material.color = color[index];
+         //   this.GetComponent<Renderer>().material.color = color[index];
 
             //if (index == 1)             
             //   // Bumper.increaseNum();
